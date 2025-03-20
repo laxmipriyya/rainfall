@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Rainfall Prediction</title>
+</head>
+<body>
+    <h1>Rainfall Prediction</h1>
+    <form method="post">
+        <label>Temperature (°C):</label>
+        <input type="number" name="temperature" step="0.01" required><br>
+
+        <label>Humidity (%):</label>
+        <input type="number" name="humidity" step="0.01" required><br>
+
+        <label>Pressure (hPa):</label>
+        <input type="number" name="pressure" step="0.01" required><br>
+
+        <button type="submit">Predict Rainfall</button>
+    </form>
+
+    {% if prediction is not none %}
+        <h2>Predicted Rainfall: {{ prediction }} mm</h2>
+    {% endif %}
+</body>
+</html>
